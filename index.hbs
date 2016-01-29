@@ -1,0 +1,17 @@
+{{!< layout.hbs}}
+<main role="main">
+  {{#foreach posts}}
+  <article class="preview">
+    <header>
+      <h1 class="post-title"><a href="{{url}}">{{{title}}}</a></h1>
+      <div class="post-date"><time datetime="{{date format='YYYY-MM-DD'}}">{{date format="DD MMMM YYYY"}}</time></div>
+    </header>
+    <section class="post-excerpt">
+      <p>{{excerpt}}&hellip;</p> {{! &hellip;代表省略号  }}
+      <p class="readmore"><a href="{{url}}">文章详情 <i class="fa fa-chevron-circle-right"></i></a></p>
+    </section>
+  </article>
+  {{/foreach}}
+
+  {{pagination}}
+</main>

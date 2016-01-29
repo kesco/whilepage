@@ -1,0 +1,31 @@
+{{!< layout.hbs}}
+
+<main class="content" role="main">
+  <article class="{{post_class}}">
+    {{#post}} {{! 数据处理器}}
+
+    <header>
+      {{#if tags}}<div class="post-date tags">发布于{{tags}}</div>{{/if}}
+      <h1 class="post-title">{{{title}}}</h1>
+      <div class="post-date"><time datetime="{{date format='YYYY-MM-DD'}}">{{date format="DD MMMM YYYY"}}</time></div>
+    </header>
+
+    <section class="post-content">
+      {{content}}
+    </section>
+
+    <footer class="post-footer">
+      {{#author}}
+        <section class="author">
+          <div class="author-image" style="background: url({{image}})"></div>
+            <p class="attr">作者</p>
+            <h4><a href="{{author.website}}">{{name}}</a></h4>
+            <p class="bio">{{bio}}</p>
+        </section>
+      {{/author}}
+    </footer>
+    {{/post}}
+
+    {{> disqus}}
+  </article>
+</main>
