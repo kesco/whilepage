@@ -205,6 +205,12 @@ h1.blog-title a:hover {
   margin-bottom: 1.2em;
   text-transform: uppercase;
 }
+.post-content img {
+  padding: 0;
+  width: calc(99%);
+  min-width: 0;
+  max-width: 100%;
+}
 section.author {
   width: 100%;
   text-align: left;
