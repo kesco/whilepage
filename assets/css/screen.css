@@ -262,9 +262,15 @@ pre {
   border: medium none;
   border-radius: 0;
 }
-pre code,
-pre tt {
+code,
+tt {
+  padding: 1px 3px;
+  font-family: Inconsolata, monospace, sans-serif;
+  font-size: 0.85em;
   white-space: pre;
+  border: #ecf0f1 1px solid;
+  background: #F7FAFB;
+  border-radius: 2px;
 }
 /* 博客Footer */
 .pagination {
